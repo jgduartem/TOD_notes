@@ -1,0 +1,31 @@
+touch crea archivos
+
+ls muestra los archivos del directorio
+
+-a muestra ocultos
+
+-l muestra en columnas
+-h muestra informacion
+-s ordena por tamaño
+-t ordena por ultima modificación
+-r ordena en reversa
+
+ln crea links entre dos archivos, siendo el segundo archivo actualizado automaticamente
+cuando se guarda el archivo fuente.
+
+cd cambia el directorio
+
+cd .. sube un directorio
+
+cd solo devuelve al home
+
+mkdir crea un directorio
+-p crea directorios intermedios
+
+cp copia archivos ejemplo: cp a.txt b.txt
+
+rm eliminar archivos
+rmdir elimina directorios
+rm -r elimina directorios
+
+mv mover archivos

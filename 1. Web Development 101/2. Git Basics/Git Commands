@@ -1,0 +1,75 @@
+git --help
+
+ Para subir un proyecto a git en consola nos vamos al directorio que queremos con el comando cd
+Una vez en el directorio usamos el comando: git init y automaticamente se crea un nuevo repositorio
+vacio.
+
+luego con ls -la se puede ver que hay en el directorio un archivo .git
+
+si no queremos seguir haicendo tracking del directorio en git basta con utilizar
+rm -rf .git
+
+para ver el estatus del tracking se utiliza git status
+
+para crear una lista de archivos a ignorar: touch -gitignore 
+Dentro de ese archivo se añaden las extensiones o los archivos que se desean ignorar.
+
+Para añadir archivos al staging area se utiliza
+
+git add -A
+
+Para eliminar git reset namefile
+
+to commit use the command
+
+git commit -m "Add a comment"
+
+CLONING A REMOTE REPO
+
+git clone <url> <where to clone>
+
+VIEWING INFORMATION ABOUT THE REMOTE REPOSITORY
+
+git remote -v		list the information to the repository
+git branch -a   		list all the branches
+
+PUSHING CHANGES IN THE CODE
+
+git diff 	muestra los cambios en el codigo
+git add -A
+git commit -m "Comment"
+
+THEN PUSH:
+
+we use this commands to take all the changes that the other developers will made in the code
+git pull origin master
+git push origin master
+
+COMMON WORKFLOW
+
+CREATE A BRANCH FOR DESIRED FEATURE
+
+git branch name-of-the-branch
+git checkout name-of-the-branch
+
+then commit.
+
+AFTER COMMIT PUSH BRANCH TO REMOTE
+
+git push -u origin  name-of-the-branch
+git branch -a
+
+MERGE A BRANCH
+
+git checkout master
+git pull origin master
+git branch --merged
+git merge name-of-the-branch
+git push origin master
+
+DELETING A BRANCH
+
+git branch --merged
+git branch -d name-of-the-branch
+git branch -a 
+git push origin --delete name-of-the-branch 
