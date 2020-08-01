@@ -1,0 +1,14 @@
+To create a CSS variable, you just need to give a name with two hypens in front of it and
+assign it a value like this:
+
+--penguin-skin: gray;
+
+once you declare the variable you will apply the variable to the other attributes using the
+syntaxis:
+
+var(--penguin-skin)
+
+you will use a fallback variable like this:
+var(--penguin skin, black) the color black will be applied if some issue occurs with the first value
+assigned to the variable.
+

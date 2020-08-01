@@ -1,0 +1,11 @@
+You have been adding id or class attributes to elements hat you wish to specifically style. 
+These are known as ID and class selectors. There are other CSS Selectors you can use to select
+custom groups of elements to style.
+
+[attr=value] for example:
+
+[type='radio']
+
+if you set and !important declaration in the atribute you would be secure that this atribute will be
+applied
+

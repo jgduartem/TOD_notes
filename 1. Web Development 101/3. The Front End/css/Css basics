@@ -1,0 +1,23 @@
+all the styles would be included between the <styles> </styles> at the top of the page
+
+principal styles:
+color: 
+font-size:
+font-family:    //// if we import a font family we need to use a second font if the first one was unavailable. Example:
+
+font-family: "imported font", generic font;
+
+width:
+
+Borders have properties like style, color and width:
+border-color:
+border-width:
+border-style:
+border-radious: would be in px to square shape or in percentage for a circular shape
+
+Use and id attribute to style an element:
+
+Note that inside your style element, you always reference classes by putting a . in front of their names.
+You always reference ids by putting a # in front of their names.
+
+
