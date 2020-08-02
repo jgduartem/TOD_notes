@@ -1,5 +1,8 @@
-Let's add a submit button to your form. Clicking this button will send the data from your form to the URL you specified with your form's action attribute.
+Let's add a submit button to your form. Clicking this button will send the data from your form to the URL 
+you specified with your form's action attribute.
 
 Here's an example submit button:
-
+<input type="text" placeholder="text that we want to see"
 <button type="submit">this button submits the form</button>
+
+add required to the bottom tu make necesary complete the field

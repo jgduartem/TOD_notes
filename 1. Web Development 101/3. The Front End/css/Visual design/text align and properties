@@ -1,0 +1,49 @@
+Text is often a large part of web content. CSS has several options for how to align it with the text-align property.
+
+text-align: justify; causes all lines of text except the last line to meet the left and right edges of the line box.
+
+text-align: center; centers the text
+
+text-align: right; right-aligns the text
+
+And text-align: left; (the default) left-aligns the text.
+
+We can modify the width and height of an element using:
+
+width:
+height:
+
+both in pixeles or percentages.
+
+To make a text bold we can use the <strong> </strong> tag
+
+To underline text we can use te <u> </u> tag
+
+To italicize text we can use the <em> </em> tag
+
+To stikethrough text we can use the <s> </s> tag
+
+To create a horizontal line across the width of te element we can use the <hr> element
+hr is a self-closing tag
+
+//////////////////////////////////////////////////
+
+The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.
+
+The following table shows how the different text-transformvalues change the example text "Transform me".
+
+Value	Result
+lowercase	"transform me"
+uppercase	"TRANSFORM ME"
+capitalize	"Transform Me"
+initial	Use the default value
+inherit	Use the text-transform value from the parent element
+none	Default: Use the original text
+Transform the text of the h4 to be uppercase using the text-transform property.
+
+The font-weight property sets how thick or thin characters are in a section of text.
+
+///////////////////////////////////////////////
+CSS offers the line-height property to change the height of each line in a block of text.
+As the name suggests, it changes the amount of vertical space that each line of text gets.
+

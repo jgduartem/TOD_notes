@@ -1,0 +1,6 @@
+To change the scale of an element, CSS has the transform property, along with its scale() function. 
+The following code example doubles the size of all the paragraph elements on the page:
+
+p {
+  transform: scale(2);
+}
