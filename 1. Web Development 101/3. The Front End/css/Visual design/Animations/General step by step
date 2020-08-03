@@ -1,0 +1,15 @@
+#pointer{
+	animation-name: given-name;
+	animation-duration: duration in s;
+	}
+	
+@keyframes given-name{
+	0%{
+ 		what we want to change
+		}
+	50%{
+		what we want to chance
+		}
+	100%{
+		what we want to chance
+		}
