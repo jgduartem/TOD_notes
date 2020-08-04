@@ -1,0 +1,10 @@
+The audio tag supports the controls attribute. This shows the browser default play, pause, and other controls, 
+and supports keyboard functionality. This is a boolean attribute, meaning it doesn't need a value, its presence 
+on the tag turns the setting on.
+
+Here's an example:
+
+<audio id="meowClip" controls>
+  <source src="audio/meow.mp3" type="audio/mpeg" />
+  <source src="audio/meow.ogg" type="audio/ogg" />
+</audio>
