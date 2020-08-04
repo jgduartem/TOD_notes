@@ -1,0 +1,12 @@
+The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, 
+use the grid-template-rows property in the same way you used grid-template-columns in previous challenge.
+
+/////////////////////////
+Grid row gaps
+////////////////////////
+
+You can add a gap in between the rows of a grid using grid-row-gap in the same way that you added a gap in 
+between columns in the previous challenge.
+
+
+

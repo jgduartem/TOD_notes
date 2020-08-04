@@ -1,0 +1,4 @@
+To make the elements into a column or row we could use the propertie flex. Example:
+
+display: flex;
+flex-direction: row;  ////// row is the default value for flex, but column is another value.
