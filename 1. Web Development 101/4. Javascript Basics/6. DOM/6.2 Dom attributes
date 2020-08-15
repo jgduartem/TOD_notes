@@ -1,0 +1,25 @@
+Working with classes
+div.classList.add('new');                                      
+// adds class "new" to your new div
+
+div.classList.remove('new');                                   
+// remove "new" class from div
+
+div.classList.toggle('active');                                
+// if div doesn't have class "active" then add it, or if
+// it does, then remove it
+It is often standard (and more clean) to toggle a CSS style rather than adding and removing inline CSS.
+
+Adding text content
+div.textContent = 'Hello World!'                               
+// creates a text node containing "Hello World!" and
+// inserts it in div
+
+
+Adding HTML content
+div.innerHTML = '<span>Hello World!</span>';                   
+// renders the html inside div
+
+*Note that textContent is preferable for adding text, and innerHTML should be used sparingly as it can create 
+security risks if misused.
+

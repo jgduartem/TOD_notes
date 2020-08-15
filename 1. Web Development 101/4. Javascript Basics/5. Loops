@@ -1,0 +1,42 @@
+The for loop:
+
+The first, which you'll use most of the time, is the for loop — this has the following syntax:
+
+for (initializer; condition; final-expression) {
+  // code to run
+}
+Here we have:
+
+The keyword for, followed by some parentheses.
+Inside the parentheses we have three items, separated by semi-colons:
+An initializer — this is usually a variable set to a number, which is incremented to count the number of times 
+the loop has run. It is also sometimes referred to as a counter variable.
+A condition — as mentioned before, this defines when the loop should stop looping. This is generally an 
+expression featuring a comparison operator, a test to see if the exit condition has been met.
+A final-expression — this is always evaluated (or run) each time the loop has gone through a full iteration. 
+It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the point 
+where the condition is no longer true.
+Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+The while loop. This loop's syntax looks like so:
+
+initializer
+while (condition) {
+  // code to run
+
+  final-expression
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+The do...while loop is very similar, but provides a variation on the while structure:
+
+initializer
+do {
+  // code to run
+
+  final-expression
+} while (condition)

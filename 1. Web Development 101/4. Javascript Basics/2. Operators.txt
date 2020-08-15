@@ -1,0 +1,36 @@
+CONDITIONAL: 
+
+if
+else
+else if
+
+switch. exaple:
+
+switch (expression) {
+  case choice1:
+    run this code
+    break;
+
+  case choice2:
+    run this code instead
+    break;
+    
+  // include as many cases as you like
+
+  default:
+    actually, just run this code
+}
+
+
+LOGICAL:
+
+|| or
+&& and
+! not
+
+Ternaty operator ?  the only operator in javascript whit three operands, syntax:
+
+let result: condition ? value1 : value2;
+
+The condition is evaluated: if is truthy then value1 is returned, otherwise value2
+
