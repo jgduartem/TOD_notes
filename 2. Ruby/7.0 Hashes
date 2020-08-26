@@ -1,0 +1,26 @@
+Hashes have a fetch method that will raise an error when you try to access a key that is not in your hash.
+
+shoes.fetch("hiking")   #=> KeyError: key not found: "hiking"
+Alternatively, this method can return a default value instead of raising an error if the given key is not found.
+
+shoes.fetch("hiking", "hiking boots") #=> "hiking boots"
+
+
+Adding and Changing Data
+You can add a key-value pair to a hash by calling the key and setting the value, just like you would with any other 
+variable.
+
+shoes["fall"] = "sneakers"
+
+shoes     #=> {"summer"=>"sandals", "winter"=>"boots", "fall"=>"sneakers"}
+You can also use this approach to change the value of an existing key.
+
+shoes["summer"] = "flip-flops"
+shoes     #=> {"summer"=>"flip-flops", "winter"=>"boots", "fall"=>"sneakers"}
+
+Removing Data
+Deleting data from a hash is simple with the hash’s #delete method, which provides the cool functionality of 
+returning the value of the key-value pair that was deleted from the hash.
+
+shoes.delete("summer")    #=> "flip-flops"
+shoes                     #=> {"winter"=>"boots", "fall"=>"sneakers"}

@@ -1,0 +1,84 @@
+include?
+The include? method checks to see if the argument given is included in the array. It has a question mark at the end
+of it which usually means that you should expect it to return a boolean value, true or false. (Such methods are 
+called predicates.) Just like the methods that end in a "!", this is strictly by convention only and not a property of the 
+language.
+
+irb: 001 > a = [1, 2, 3, 4, 5]
+=> [1, 2, 3, 4, 5]
+irb: 002 > a.include?(3)
+=> true
+irb: 003 > a.include?(6)
+=> false
+
+
+flatten
+The flatten method can be used to take an array that contains nested arrays and create a one-dimensional array.
+
+irb: 001 > a = [1, 2, [3, 4, 5], [6, 7]]
+=> [1, 2, [3, 4, 5], [6, 7]]
+irb: 002 > a.flatten
+=> [1, 2, 3, 4, 5, 6, 7]
+
+
+each_index
+The each_index method iterates through the array much like the each method, however the variable represents the index number as opposed to the value at each index. It passes the index of the element into the block and you may do as you please with it. The original array is returned.
+
+irb: 001 > a = [1, 2, 3, 4, 5]
+=> [1, 2, 3, 4, 5]
+irb: 002 > a.each_index { |i| puts "This is index #{i}" }
+This is index 0
+This is index 1
+This is index 2
+This is index 3
+This is index 4
+=> [1, 2, 3, 4, 5]
+
+
+each_with_index
+Another useful method that works in a similar way to each_index is each_with_index.
+
+irb: 001 > a = [1, 2, 3, 4, 5]
+=> [1, 2, 3, 4, 5]
+irb: 002 > a.each_with_index { |val, idx| puts "#{idx+1}. #{val}" }
+1. 1
+2. 2
+3. 3
+4. 4
+5. 5
+=> [1, 2, 3, 4, 5]
+each_with_index gives us the ability to manipulate both the value and the index by passing in two parameters to 
+the block of code. The first is the value and the second is the index. You can then use them in the block.
+
+
+sort
+The sort method is a handy way to order an array. It returns a sorted array.
+
+irb :001 > a = [5, 3, 8, 2, 4, 1]
+=> [5, 3, 8, 2, 4, 1]
+irb :002 > a.sort
+=> [1, 2, 3, 4, 5, 8]
+
+
+product
+The product method can be used to combine two arrays in an interesting way. It returns an array that is a 
+combination of all elements from all arrays.
+
+irb :001 > [1, 2, 3].product([4, 5])
+=> [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+
+split
+to convert an string to array.
+
+
+sample
+take a random value of the array.
+
+Take 
+Take elements from the array without changing it.
+
+Insert
+Using the insert method, you can also insert multiple values at once:
+
+arr.insert(3, 'orange', 'pear', 'grapefruit')
+#=> [0, 1, 2, "orange", "pear", "grapefruit", "apple", 3, 4, 5, 6]

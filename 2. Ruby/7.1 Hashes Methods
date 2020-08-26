@@ -1,0 +1,107 @@
+A couple of useful methods that are specific to hashes are the #keys and #values methods, which very 
+unsurprisingly return the keys and values of a hash, respectively. Note that both of these methods return arrays.
+
+books = { 
+  "Infinite Jest" => "David Foster Wallace", 
+  "Into the Wild" => "Jon Krakauer" 
+}
+
+books.keys      #=> ["Infinite Jest", "Into the Wild"]
+books.values    #=> ["David Foster Wallace", "Jon Krakauer"]
+
+
+has_key?
+The has_key? method allows you to check if a hash contains a specific key. It returns a boolean value.
+
+irb :001 > name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+=> {"Bob"=>42, "Steve"=>31, "Joe"=>19}
+irb :002 > name_and_age.has_key?("Steve")
+=> true
+irb :003 > name_and_age.has_key?("Larry")
+=> false
+
+
+select
+The select method allows you to pass a block and will return any key-value pairs that evaluate to true when ran through the block.
+
+irb :004 > name_and_age.select { |k,v| k == "Bob" }
+=> {"Bob"=>42}
+irb :005 > name_and_age.select { |k,v| (k == "Bob") || (v == 19) }
+=> {"Bob"=>42, "Joe"=>19}
+
+
+fetch
+The fetch method allows you to pass a given key and it will return the value for that key if it exists. You can also specify an option for return if that key is not present. Take a look at the Ruby docs here to see what else is possible.
+
+irb :006 > name_and_age.fetch("Steve")
+=> 31
+irb :007 > name_and_age.fetch("Larry")
+=> KeyError: key not found: "Larry"
+     from (irb):32:in `fetch'
+     from (irb):32
+     from /usr/local/rvm/rubies/ruby-2.5.3/bin/irb:16:in `<main>'
+irb :008 > name_and_age.fetch("Larry", "Larry isn't in this hash")
+=> "Larry isn't in this hash"
+
+
+
+to_a
+The to_a method returns an array version of your hash when called. Let's see it in action. It doesn't modify the hash 
+permanently though.
+
+irb :009 > name_and_age.to_a
+=> [["Bob", 42], ["Steve", 31], ["Joe", 19]]
+irb :010 > name_and_age
+=> {"Bob"=>42, "Steve"=>31, "Joe"=>19}
+
+Merging Two Hashes
+Occasionally, you’ll come across a situation where two hashes wish to come together in holy union. 
+Luckily, there’s a method for that. (No ordained minister required!)
+
+hash1 = { "a" => 100, "b" => 200 }
+hash2 = { "b" => 254, "c" => 300 }
+hash1.merge(hash2)      #=> { "a" => 100, "b" => 254, "c" => 300 }
+Notice that the values from the hash getting merged in (in this case, the values in hash2) overwrite the values of 
+the hash getting… uh, merged at (hash1 here) when the two hashes have a key that’s the same.
+
+
+Symbols as Hash Keys
+In this lesson, we mostly used strings for hash keys, but in the real world, you’ll almost always see symbols
+(like :this_guy) used as keys. This is predominantly because symbols are far more performant than strings in Ruby, 
+but they also allow for a much cleaner syntax when defining hashes. Behold the beauty:
+
+# 'Rocket' syntax 
+american_cars = { 
+  :chevrolet => "Corvette", 
+  :ford => "Mustang", 
+  :dodge => "Ram" 
+}
+# 'Symbols' syntax
+japanese_cars = { 
+  honda: "Accord", 
+  toyota: "Corolla", 
+  nissan: "Altima" 
+}
+
+has_key?
+The has_key? method allows you to check if a hash contains a specific key. It returns a boolean value.
+
+irb :001 > name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+=> {"Bob"=>42, "Steve"=>31, "Joe"=>19}
+irb :002 > name_and_age.has_key?("Steve")
+=> true
+irb :003 > name_and_age.has_key?("Larry")
+=> false
+
+That last example brings a tear to the eye, doesn’t it? Notice that the hash rocket and the colon that represents a 
+symbol have been mashed together. This unfortunately only works for symbols, though, so don’t try { 9: “value” } or 
+you’ll get a syntax error.
+
+When you use the cleaner ‘symbols’ syntax to create a hash, you’ll still need to use the standard symbol syntax 
+when you’re trying to access a value. In other words, regardless of which of the above two syntax options you use 
+when creating a hash, they both create symbol keys that are accessed the same way.
+
+american_cars[:ford]    #=> "Mustang"
+japanese_cars[:honda]   #=> "Accord"
+
+

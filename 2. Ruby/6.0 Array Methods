@@ -1,0 +1,77 @@
+The map method iterates over an array applying a block to each element of the array and returns a new array 
+with those results. The irb session below shows how to use map to get the square of all numbers in an array. 
+The collect method is an alias to map - they do the same thing.
+
+irb :001 > a = [1, 2, 3, 4]
+=> [1, 2, 3, 4]
+irb :002 > a.map { |num| num**2 }
+=> [1, 4, 9, 16]
+irb :003 > a.collect { |num| num**2 }
+=> [1, 4, 9, 16]
+irb :004 > a
+=> [1, 2, 3, 4]
+
+
+The delete_at method can be helpful if you'd like to eliminate the value at a certain index from your array. You'll want
+ to be careful with this one, because it modifies your array destructively. Once you call this method, you are 
+changing your array permanently.
+
+irb :005 > a.delete_at(1)
+=> 2
+irb :006 > a
+=> [1, 3, 4]
+
+As a side note, sometimes you will know the value that you want to delete, but not the index. In these situations you 
+will want to use the delete method. The delete method permanently deletes all instances of the provided value 
+from the array.
+
+irb :007 > my_pets = ["cat", "dog", "bird", "cat", "snake"]
+=> ["cat", "dog", "bird", "cat", "snake"]
+irb :008 > my_pets.delete("cat")
+=> "cat"
+irb :009 > my_pets
+=> ["dog", "bird", "snake"]
+
+
+The uniq method. This iterates through an array, deletes any duplicate values that exist, then returns the result as a 
+new array.
+
+irb :010 > b = [1, 1, 2, 2, 3, 3, 4, 4]
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+irb :011 > b.uniq
+=> [1, 2, 3, 4]
+irb :012 > b
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+Once again, notice that the uniq method did not modify the original b array; it returned a new array with the 
+duplicates removed.
+
+If you add the bang suffix (!) to this method, you can perform the uniq function destructively. Much like the way the 
+delete method works.
+
+irb :013 > b = [1, 1, 2, 2, 3, 3, 4, 4]
+=> [1, 1, 2, 2, 3, 3, 4, 4]
+irb :014 > b.uniq!
+=> [1, 2, 3, 4]
+irb :015 > b
+=> [1, 2, 3, 4]
+uniq and uniq! are two different methods for Ruby Arrays. You cannot simply append a ! onto any method and 
+achieve a destructive operation.
+
+
+Iterating Over an Array
+We talked in the loop section about using each to iterate over an array. The Ruby standard library has many similar 
+methods. Let's take a look at the select method. This method iterates over an array and returns a new array that 
+includes any items that return true to the expression provided. That's a mouthful. As always, looking at code is 
+more helpful than using a bunch of words.
+
+irb :001 > numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+irb :002 > numbers.select { |number| number > 4 }
+ => [5, 6, 7, 8, 9, 10]
+irb :003 > numbers
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ 
+The select method selects all of the numbers that are greater than 4 and returns them in an array. It does not 
+mutate the caller (the original numbers array is unmodified).
+
+
